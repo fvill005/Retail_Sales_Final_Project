@@ -48,7 +48,11 @@ INNER JOIN Sales AS s ON
 f.sale_date=s.sale_date;
 
 
-
+copy Features(Store, Sale_Date, Temperature,Fuel_Price,
+			  MarkDown1, MarkDown2, MarkDown3, MarkDown4, MarkDown5, Unemployment, IsHoliday )
+from '/tmp/Features_cleaned.csv'
+delimiter ','
+CSV HEADER;
 
 
 
